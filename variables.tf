@@ -13,9 +13,8 @@ variable "cluster_name" {
 variable "kubernetes_version" {
   description = "Versão do Kubernetes"
   type        = string
-  default     = "1.29"
+  default     = "1.31"
 }
-
 variable "node_instance_type" {
   description = "Tipo de instância dos nodes"
   type        = string
