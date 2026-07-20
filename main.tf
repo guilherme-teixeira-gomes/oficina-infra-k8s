@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "oficina-terraform-state"
+    bucket = "oficina-terraform-state-gtx"
     key    = "k8s/terraform.tfstate"
     region = "us-east-1"
   }
@@ -32,7 +32,7 @@ provider "aws" {
 data "terraform_remote_state" "database" {
   backend = "s3"
   config = {
-    bucket = "oficina-terraform-state"
+    bucket = "oficina-terraform-state-gtx"
     key    = "database/terraform.tfstate"
     region = "us-east-1"
   }
